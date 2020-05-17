@@ -9,3 +9,12 @@ Exiled plugin for creating custom badges
 | cbadges_enabled | bool              | true       |
 | cbadges_badges  | String Dictionary |            |
 | cbadges_users   | String Dictionary |            |
+#### Example
+```yaml
+cbadges_enabled: true
+cbadges_badges:
+ - Apple: red
+
+cbadges_users:
+ - 76561198907264325@steam: Apple
+```
