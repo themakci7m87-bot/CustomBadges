@@ -1,20 +1,5 @@
 # CustomBadges
-Exiled plugin for creating custom badges
+Exiled plugin for creating custom badges (Required [EXILED 2.0.5](https://github.com/galaxy119/EXILED/releases/tag/2.0.5)+)
 ## Installation
-1. Move `CustomBadges.dll` to `~/.config/Plugins` (`%appdata%\Plugins` on Windows)
-1. Change the configuration file (`~/.config/EXILED/<port>-config.yml` (`%appdata%\EXILED\<port>-config.yml` on Windows)) according to the following section
-## Configuration
-| Key             | Type              | Def. Vault |
-|-----------------|-------------------|------------|
-| cbadges_enabled | bool              | true       |
-| cbadges_badges  | String Dictionary |            |
-| cbadges_users   | String Dictionary |            |
-#### Example
-```yaml
-cbadges_enabled: true
-cbadges_badges:
- - Apple: red
-
-cbadges_users:
- - 76561198907264325@steam: Apple
-```
+1. Move `CustomBadges.dll` to `~/.config/EXILED-PTB/Plugins`
+1. Configure the plugin (see [EXILED F.A.Q](https://discord.gg/UuTYXKb))
