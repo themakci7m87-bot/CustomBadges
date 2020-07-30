@@ -7,7 +7,7 @@
     {
         private Handlers.Player player;
 
-        public override PluginPriority Priority => PluginPriority.Low;
+        public override PluginPriority Priority => PluginPriority.Lower;
 
         public override void OnEnabled()
         {
