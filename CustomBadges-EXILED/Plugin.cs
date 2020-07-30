@@ -14,8 +14,8 @@
             if (!Config.IsEnabled) return;
 
             base.OnEnabled();
-
             player = new Handlers.Player();
+            player.Badges = Config.Badges;
             Exiled.Events.Handlers.Player.Joined += player.OnJoined;
 
         }
@@ -25,6 +25,7 @@
             base.OnDisabled();
 
             Exiled.Events.Handlers.Player.Joined -= player.OnJoined;
+            player.Badges = null;
             player = null;
         }
     }
