@@ -13,7 +13,7 @@
         public Dictionary<string, List<string>> Badges { get; private set; } = new Dictionary<string, List<string>>() 
         {
             {
-                "76561198907264325@steam", new List<string>()
+                "76561198907264325@steam", new List<string>
                 {
                     "Pepe", "green"
                 }

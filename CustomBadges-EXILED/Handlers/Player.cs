@@ -16,8 +16,8 @@
             #region Issuing a custom badge
             List<string> rank = Badges[ev.Player.UserId];
 
-            ev.Player.RankName = rank[1];
-            ev.Player.RankColor = rank[2];
+            ev.Player.RankName = rank[0];
+            ev.Player.RankColor = rank[1];
             ev.Player.BadgeHidden = true;
             #endregion
         }
