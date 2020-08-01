@@ -30,5 +30,7 @@
             Handlers.Badges = null;
             Handlers = null;
         }
+
+        public override void OnReloaded() => base.OnReloaded();
     }
 }
