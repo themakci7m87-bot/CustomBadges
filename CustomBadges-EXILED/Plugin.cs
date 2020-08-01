@@ -5,28 +5,30 @@
 
     public class Plugin : Plugin<Config>
     {
-        private Handlers.Player player;
+        private Handlers Handlers;
 
         public override PluginPriority Priority => PluginPriority.Lower;
 
         public override void OnEnabled()
         {
-            if (!Config.IsEnabled) return;
-
             base.OnEnabled();
-            player = new Handlers.Player();
-            player.Badges = Config.Badges;
-            Exiled.Events.Handlers.Player.Joined += player.OnJoined;
 
+            Handlers = new Handlers();
+            Handlers.Badges = Config.Badges;
+
+            Exiled.Events.Handlers.Player.Joined += Handlers.OnJoined;
+            Exiled.Events.Handlers.Server.SendingConsoleCommand += Handlers.OnSendingConsoleCommand;
         }
 
         public override void OnDisabled()
         {
             base.OnDisabled();
 
-            Exiled.Events.Handlers.Player.Joined -= player.OnJoined;
-            player.Badges = null;
-            player = null;
+            Exiled.Events.Handlers.Player.Joined -= Handlers.OnJoined;
+            Exiled.Events.Handlers.Server.SendingConsoleCommand -= Handlers.OnSendingConsoleCommand;
+
+            Handlers.Badges = null;
+            Handlers = null;
         }
     }
 }
