@@ -5,7 +5,7 @@
 
     public class Plugin : Plugin<Config>
     {
-        private Handlers Handlers;
+        private EventHandlers Handlers;
 
         public override PluginPriority Priority => PluginPriority.Lower;
 
@@ -13,7 +13,7 @@
         {
             base.OnEnabled();
 
-            Handlers = new Handlers();
+            Handlers = new EventHandlers();
             Handlers.Badges = Config.Badges;
 
             Exiled.Events.Handlers.Player.Joined += Handlers.OnJoined;
